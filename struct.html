@@ -1,0 +1,170 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hierarchy &mdash; psidialogs v0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="psidialogs v0.0.1 documentation" href="index.html" />
+    <link rel="next" title="API" href="api.html" />
+    <link rel="prev" title="About" href="readme.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="About"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">psidialogs v0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="hierarchy">
+<h1>Hierarchy<a class="headerlink" href="#hierarchy" title="Permalink to this headline">¶</a></h1>
+<p class="graphviz">
+<img src="_images/graphviz-c8cae6054ff3a0e2ac0bca9695c73b779e10aeae.png" alt="digraph G {
+rankdir=LR;
+node [fontsize=8];
+fontsize=8;
+
+subgraph cluster_0 {
+        label = &quot;psidialogs&quot;;
+        style=filled;
+        fillcolor=lightgrey;
+        subgraph cluster_1 {
+                label = &quot;API&quot;;
+                style=filled;
+                fillcolor=white;
+
+                psidialogs;
+        }
+        subgraph cluster_2 {
+                style=filled;
+                fillcolor=white;
+                label = &quot;wrappers&quot;;
+
+                psidialogs -&gt; console_wrapper;
+                psidialogs -&gt; easygui_wrapper;
+                psidialogs -&gt; gmessage_wrapper;
+                psidialogs -&gt; pygtk_wrapper;
+                psidialogs -&gt; pyqt_wrapper;
+                psidialogs -&gt; pythondialog_wrapper;
+                psidialogs -&gt; tkinter_wrapper;
+                psidialogs -&gt; wxpython_wrapper;
+                psidialogs -&gt; zenity_wrapper;
+        }
+}
+console_wrapper -&gt; Console;
+easygui_wrapper -&gt; easygui -&gt; TkInter -&gt; Tk;
+gmessage_wrapper -&gt; gMessage -&gt; &quot;GTK+&quot;;
+pyqt_wrapper -&gt; PyQt -&gt; Qt;
+pythondialog_wrapper -&gt; &quot;Python Dialog&quot; -&gt; Xdialog -&gt; X11;
+&quot;Python Dialog&quot;  -&gt; dialog -&gt; Ncurses;
+tkinter_wrapper -&gt; TkInter;
+zenity_wrapper -&gt; Zenity -&gt; &quot;GTK+&quot;;
+
+pygtk_wrapper -&gt; PyGTK -&gt; &quot;GTK+&quot;;
+wxpython_wrapper -&gt; wxPython -&gt; wxWidgets;
+wxWidgets -&gt; &quot;GTK+&quot;;
+wxWidgets -&gt; MacOS;
+wxWidgets -&gt; Windows;
+wxWidgets -&gt; &quot;Palm OS&quot;;
+wxWidgets -&gt; X11;
+
+application -&gt; psidialogs;
+
+
+}" />
+</p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="readme.html"
+                        title="previous chapter">About</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="api.html"
+                        title="next chapter">API</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/struct.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="api.html" title="API"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="readme.html" title="About"
+             >previous</a> |</li>
+        <li><a href="index.html">psidialogs v0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>

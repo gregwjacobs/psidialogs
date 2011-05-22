@@ -1,0 +1,447 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>API &mdash; psidialogs v0.0.1 documentation</title>
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="psidialogs v0.0.1 documentation" href="index.html" />
+    <link rel="next" title="Screenshots" href="screen.html" />
+    <link rel="prev" title="Hierarchy" href="struct.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="screen.html" title="Screenshots"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="struct.html" title="Hierarchy"
+             accesskey="P">previous</a> |</li>
+        <li><a href="index.html">psidialogs v0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="api">
+<h1>API<a class="headerlink" href="#api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ask-file">
+<h2>ask_file()<a class="headerlink" href="#ask-file" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.ask_file">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">ask_file</tt><big>(</big><em>message='Select file for open.'</em>, <em>default=''</em>, <em>title=''</em>, <em>save=False</em><big>)</big><a class="headerlink" href="#psidialogs.ask_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dialog to get a file name.
+The &#8220;default&#8221; argument specifies a file path.</p>
+<p>save=False -&gt; file for loading
+save=True -&gt; file for saving</p>
+<p>Returns the file path that the user entered, or None if he cancels the operation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>save</strong> &#8211; bool 0 -&gt; load , 1 -&gt; save</li>
+<li><strong>title</strong> &#8211; window title</li>
+<li><strong>default</strong> &#8211; default file path</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None or string</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="ask-folder">
+<h2>ask_folder()<a class="headerlink" href="#ask-folder" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.ask_folder">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">ask_folder</tt><big>(</big><em>message='Select folder.'</em>, <em>default=''</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.ask_folder" title="Permalink to this definition">¶</a></dt>
+<dd><p>A dialog to get a directory name.
+Returns the name of a directory, or None if user chose to cancel.
+If the &#8220;default&#8221; argument specifies a directory name, and that
+directory exists, then the dialog box will start with that directory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+<li><strong>default</strong> &#8211; default folder path</li>
+<li><strong>ok</strong> &#8211; label of the ok button</li>
+<li><strong>cancel</strong> &#8211; label of the cancel button</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None or string</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="ask-ok-cancel">
+<h2>ask_ok_cancel()<a class="headerlink" href="#ask-ok-cancel" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.ask_ok_cancel">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">ask_ok_cancel</tt><big>(</big><em>message=''</em>, <em>default=0</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.ask_ok_cancel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a message with choices of OK and Cancel.</p>
+<dl class="docutils">
+<dt>returned value:</dt>
+<dd>OK       -&gt; True
+Cancel   -&gt; False</dd>
+</dl>
+<p><a class="reference internal" href="screen.html#ask-ok-cancel"><em>screenshots</em></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+<li><strong>default</strong> &#8211; default button as boolean (OK=True, Cancel=False)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="ask-string">
+<h2>ask_string()<a class="headerlink" href="#ask-string" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.ask_string">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">ask_string</tt><big>(</big><em>message='Enter something.'</em>, <em>default=''</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.ask_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show a box in which a user can enter some text.</p>
+<p>You may optionally specify some default text, which will appear in the
+entry-box when it is displayed.</p>
+<p>Returns the text that the user entered, or None if he cancels the operation</p>
+<p><a class="reference internal" href="screen.html#ask-string"><em>screenshots</em></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+<li><strong>default</strong> &#8211; entry-box default string</li>
+<li><strong>ok</strong> &#8211; label of the ok button</li>
+<li><strong>cancel</strong> &#8211; label of the cancel button</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None or string</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="ask-yes-no">
+<h2>ask_yes_no()<a class="headerlink" href="#ask-yes-no" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.ask_yes_no">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">ask_yes_no</tt><big>(</big><em>message=''</em>, <em>default=0</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.ask_yes_no" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a message with choices of Yes and No.</p>
+<dl class="docutils">
+<dt>returned value:</dt>
+<dd>Yes  -&gt; True
+No   -&gt; False</dd>
+</dl>
+<p><a class="reference internal" href="screen.html#ask-yes-no"><em>screenshots</em></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+<li><strong>default</strong> &#8211; default button as boolean (YES=True, NO=False)</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="choice">
+<h2>choice()<a class="headerlink" href="#choice" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.choice">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">choice</tt><big>(</big><em>choices=</em><span class="optional">[</span><span class="optional">]</span>, <em>message='Pick something.'</em>, <em>default=None</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.choice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Present the user with a list of choices.
+return the choice that he selects.
+return None if he cancels the selection selection.</p>
+<p><a class="reference internal" href="screen.html#choice"><em>screenshots</em></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>choices</strong> &#8211; a list of the choices to be displayed</li>
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+<li><strong>default</strong> &#8211; default string of choice</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None or string</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="error">
+<h2>error()<a class="headerlink" href="#error" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.error">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">error</tt><big>(</big><em>message='Error!'</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.error" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a warning message</p>
+<p><a class="reference internal" href="screen.html#error"><em>screenshots</em></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="message">
+<h2>message()<a class="headerlink" href="#message" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.message">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">message</tt><big>(</big><em>message</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.message" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display a message</p>
+<p><a class="reference internal" href="screen.html#message"><em>screenshots</em></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="multi-choice">
+<h2>multi_choice()<a class="headerlink" href="#multi-choice" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.multi_choice">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">multi_choice</tt><big>(</big><em>choices=</em><span class="optional">[</span><span class="optional">]</span>, <em>message='Pick as many items as you like.'</em>, <em>default=None</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.multi_choice" title="Permalink to this definition">¶</a></dt>
+<dd><p>Present the user with a list of choices.
+allow him to select multiple items and return them in a list.
+if the user doesn&#8217;t choose anything from the list, return the empty list.
+return None if he cancelled selection.</p>
+<p><a class="reference internal" href="screen.html#multi-choice"><em>screenshots</em></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>choices</strong> &#8211; a list of the choices to be displayed</li>
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+<li><strong>default</strong> &#8211; default list of strings</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None or list of strings</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="text">
+<h2>text()<a class="headerlink" href="#text" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.text">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">text</tt><big>(</big><em>text</em>, <em>message=''</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.text" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function is suitable for displaying general text, which can be longer
+than in <a class="reference internal" href="#psidialogs.message" title="psidialogs.message"><tt class="xref py py-func docutils literal"><span class="pre">message()</span></tt></a></p>
+<p><a class="reference internal" href="screen.html#text"><em>screenshots</em></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>text</strong> &#8211; (long) text to be displayed</li>
+<li><strong>message</strong> &#8211; (short) message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="warning">
+<h2>warning()<a class="headerlink" href="#warning" title="Permalink to this headline">¶</a></h2>
+<span class="target" id="module-psidialogs"></span><dl class="function">
+<dt id="psidialogs.warning">
+<tt class="descclassname">psidialogs.</tt><tt class="descname">warning</tt><big>(</big><em>message='Warning!'</em>, <em>title=''</em><big>)</big><a class="headerlink" href="#psidialogs.warning" title="Permalink to this definition">¶</a></dt>
+<dd><p>Display an error message</p>
+<p><a class="reference internal" href="screen.html#warning"><em>screenshots</em></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> &#8211; message to be displayed.</li>
+<li><strong>title</strong> &#8211; window title</li>
+</ul>
+</td>
+</tr>
+<tr class="field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">None</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">API</a><ul>
+<li><a class="reference internal" href="#ask-file">ask_file()</a></li>
+<li><a class="reference internal" href="#ask-folder">ask_folder()</a></li>
+<li><a class="reference internal" href="#ask-ok-cancel">ask_ok_cancel()</a></li>
+<li><a class="reference internal" href="#ask-string">ask_string()</a></li>
+<li><a class="reference internal" href="#ask-yes-no">ask_yes_no()</a></li>
+<li><a class="reference internal" href="#choice">choice()</a></li>
+<li><a class="reference internal" href="#error">error()</a></li>
+<li><a class="reference internal" href="#message">message()</a></li>
+<li><a class="reference internal" href="#multi-choice">multi_choice()</a></li>
+<li><a class="reference internal" href="#text">text()</a></li>
+<li><a class="reference internal" href="#warning">warning()</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="struct.html"
+                        title="previous chapter">Hierarchy</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="screen.html"
+                        title="next chapter">Screenshots</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/api.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="screen.html" title="Screenshots"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="struct.html" title="Hierarchy"
+             >previous</a> |</li>
+        <li><a href="index.html">psidialogs v0.0.1 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2011, ponty.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.7.
+    </div>
+  </body>
+</html>
