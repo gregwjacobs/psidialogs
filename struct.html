@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Hierarchy &mdash; psidialogs 0.0.2 documentation</title>
+    <title>Hierarchy &mdash; psidialogs 0.0.4 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.2',
+        VERSION:     '0.0.4',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="psidialogs 0.0.2 documentation" href="index.html" />
+    <link rel="top" title="psidialogs 0.0.4 documentation" href="index.html" />
     <link rel="next" title="API" href="api.html" />
     <link rel="prev" title="About" href="readme.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="readme.html" title="About"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">psidialogs 0.0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">psidialogs 0.0.4 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,59 +57,62 @@
   <div class="section" id="hierarchy">
 <h1>Hierarchy<a class="headerlink" href="#hierarchy" title="Permalink to this headline">¶</a></h1>
 <p class="graphviz">
-<img src="_images/graphviz-4b12b464c0f05e381597c3ff20debd3bf8df9abf.png" alt="digraph G {
-rankdir=LR;
-node [fontsize=8];
-fontsize=8;
+<img src="_images/graphviz-7fbb4f5d522d06dc599965b54a330f76316bf38b.png" alt="digraph G {
+    rankdir=LR;
+    node [fontsize=8];
+    fontsize=8;
 
-subgraph cluster_0 {
-        label = &quot;psidialogs&quot;;
-        style=filled;
-        fillcolor=lightgrey;
-        subgraph cluster_1 {
-                label = &quot;API&quot;;
-                style=filled;
-                fillcolor=white;
+    subgraph cluster_0 {
+            label = &quot;psidialogs&quot;;
+            style=filled;
+            fillcolor=lightgrey;
+            subgraph cluster_1 {
+                    label = &quot;API&quot;;
+                    style=filled;
+                    fillcolor=white;
 
-                psidialogs;
-        }
-        subgraph cluster_2 {
-                style=filled;
-                fillcolor=white;
-                label = &quot;wrappers&quot;;
+                    psidialogs;
+            }
+            subgraph cluster_2 {
+                    style=filled;
+                    fillcolor=white;
+                    label = &quot;wrappers&quot;;
 
-                psidialogs -&gt; console_wrapper;
-                psidialogs -&gt; easygui_wrapper;
-                psidialogs -&gt; gmessage_wrapper;
-                psidialogs -&gt; pygtk_wrapper;
-                psidialogs -&gt; pyqt_wrapper;
-                psidialogs -&gt; pythondialog_wrapper;
-                psidialogs -&gt; tkinter_wrapper;
-                psidialogs -&gt; wxpython_wrapper;
-                psidialogs -&gt; zenity_wrapper;
-        }
-}
-console_wrapper -&gt; Console;
-easygui_wrapper -&gt; easygui -&gt; TkInter -&gt; Tk;
-gmessage_wrapper -&gt; gMessage -&gt; &quot;GTK+&quot;;
-pyqt_wrapper -&gt; PyQt -&gt; Qt;
-pythondialog_wrapper -&gt; &quot;Python Dialog&quot; -&gt; Xdialog -&gt; X11;
-&quot;Python Dialog&quot;  -&gt; dialog -&gt; Ncurses;
-tkinter_wrapper -&gt; TkInter;
-zenity_wrapper -&gt; Zenity -&gt; &quot;GTK+&quot;;
+                    psidialogs -&gt; console_wrapper;
+                    psidialogs -&gt; easygui_wrapper;
+        psidialogs -&gt; easydialogs_wrapper;
+                    psidialogs -&gt; gmessage_wrapper;
+                    psidialogs -&gt; pygtk_wrapper;
+                    psidialogs -&gt; pyqt_wrapper;
+                    psidialogs -&gt; pythondialog_wrapper;
+                    psidialogs -&gt; tkinter_wrapper;
+                    psidialogs -&gt; wxpython_wrapper;
+        psidialogs -&gt; zenity_wrapper;
+            }
+    }
+    console_wrapper -&gt; Console;
+    easygui_wrapper -&gt; easygui -&gt; TkInter -&gt; Tk;
+    gmessage_wrapper -&gt; gMessage -&gt; &quot;GTK+&quot;;
+    pyqt_wrapper -&gt; PyQt -&gt; Qt;
+    pythondialog_wrapper -&gt; &quot;Python Dialog&quot; -&gt; Xdialog -&gt; X11;
+    &quot;Python Dialog&quot;  -&gt; dialog -&gt; Ncurses;
+    tkinter_wrapper -&gt; TkInter;
+    zenity_wrapper -&gt; Zenity -&gt; &quot;GTK+&quot;;
 
-pygtk_wrapper -&gt; PyGTK -&gt; &quot;GTK+&quot;;
-wxpython_wrapper -&gt; wxPython -&gt; wxWidgets;
-wxWidgets -&gt; &quot;GTK+&quot;;
-wxWidgets -&gt; MacOS;
-wxWidgets -&gt; Windows;
-wxWidgets -&gt; &quot;Palm OS&quot;;
-wxWidgets -&gt; X11;
+    pygtk_wrapper -&gt; PyGTK -&gt; &quot;GTK+&quot;;
+    wxpython_wrapper -&gt; wxPython -&gt; wxWidgets;
+    wxWidgets -&gt; &quot;GTK+&quot;;
+    wxWidgets -&gt; MacOS;
+    wxWidgets -&gt; Windows;
+    wxWidgets -&gt; &quot;Palm OS&quot;;
+    wxWidgets -&gt; X11;
 
-application -&gt; psidialogs;
+    application -&gt; psidialogs;
 
-
-}" />
+easydialogs_wrapper -&gt; EasyDialogs -&gt; MacOS;
+easydialogs_wrapper -&gt; &quot;easydialogs-gtk&quot; -&gt; PyGTK;
+easydialogs_wrapper -&gt; &quot;EasyDialogs for Windows&quot; -&gt; Windows;
+    }" />
 </p>
 </div>
 
@@ -162,7 +165,7 @@ application -&gt; psidialogs;
         <li class="right" >
           <a href="readme.html" title="About"
              >previous</a> |</li>
-        <li><a href="index.html">psidialogs 0.0.2 documentation</a> &raquo;</li> 
+        <li><a href="index.html">psidialogs 0.0.4 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
