@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>About &mdash; psidialogs 0.0.4 documentation</title>
+    <title>About &mdash; psidialogs 0.0.5 documentation</title>
     
     <link rel="stylesheet" href="_static/default.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -16,7 +16,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '',
-        VERSION:     '0.0.4',
+        VERSION:     '0.0.5',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="psidialogs 0.0.4 documentation" href="index.html" />
+    <link rel="top" title="psidialogs 0.0.5 documentation" href="index.html" />
     <link rel="next" title="Hierarchy" href="struct.html" />
     <link rel="prev" title="Indices and tables" href="index.html" /> 
   </head>
@@ -45,7 +45,7 @@
         <li class="right" >
           <a href="index.html" title="Indices and tables"
              accesskey="P">previous</a> |</li>
-        <li><a href="index.html">psidialogs 0.0.4 documentation</a> &raquo;</li> 
+        <li><a href="index.html">psidialogs 0.0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -57,16 +57,14 @@
   <div class="section" id="about">
 <h1>About<a class="headerlink" href="#about" title="Permalink to this headline">¶</a></h1>
 <p>psidialogs (Python Simple Dialogs) is a common API
-for different standard dialogs like:</p>
-<blockquote>
-<div><ul class="simple">
-<li>message</li>
-<li>warning</li>
-<li>ask_string</li>
-<li>...</li>
-</ul>
-</div></blockquote>
+for different standard dialogs like message, ask_string,..</p>
 <dl class="docutils">
+<dt>Links:</dt>
+<dd><ul class="first last simple">
+<li>home: <a class="reference external" href="https://github.com/ponty/psidialogs">https://github.com/ponty/psidialogs</a></li>
+<li>documentation: <a class="reference external" href="http://ponty.github.com/psidialogs">http://ponty.github.com/psidialogs</a></li>
+</ul>
+</dd>
 <dt>Backends:</dt>
 <dd><ul class="first last simple">
 <li>PyGTK</li>
@@ -79,12 +77,6 @@ for different standard dialogs like:</p>
 <li>PythonDialog</li>
 <li>console</li>
 <li>EasyDialogs</li>
-</ul>
-</dd>
-<dt>Links:</dt>
-<dd><ul class="first last simple">
-<li>home: <a class="reference external" href="https://github.com/ponty/psidialogs">https://github.com/ponty/psidialogs</a></li>
-<li>documentation: <a class="reference external" href="http://ponty.github.com/psidialogs">http://ponty.github.com/psidialogs</a></li>
 </ul>
 </dd>
 </dl>
@@ -103,24 +95,21 @@ implementation is used where implementation is missing.</p>
 <div class="section" id="general">
 <h2>General<a class="headerlink" href="#general" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><ul class="simple">
-<li>install <a class="reference external" href="http://peak.telecommunity.com/DevCenter/EasyInstall">setuptools</a> or <a class="reference external" href="http://pip.openplans.org/">pip</a></li>
-<li>install the program:</li>
-</ul>
-</div></blockquote>
-<p>if you have <a class="reference external" href="http://peak.telecommunity.com/DevCenter/EasyInstall">setuptools</a> installed:</p>
-<div class="highlight-python"><pre># as root
-easy_install psidialogs</pre>
-</div>
-<p>if you have <a class="reference external" href="http://pip.openplans.org/">pip</a> installed:</p>
+<div><ul>
+<li><p class="first">install <a class="reference external" href="http://pip.openplans.org/">pip</a></p>
+</li>
+<li><p class="first">install the program:</p>
 <div class="highlight-python"><pre># as root
 pip install psidialogs</pre>
 </div>
+</li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="ubuntu">
 <h2>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python"><pre>sudo apt-get install python-setuptools
-sudo easy_install psidialogs</pre>
+<div class="highlight-python"><pre>sudo apt-get install python-pip
+sudo pip install psidialogs</pre>
 </div>
 </div>
 <div class="section" id="uninstall">
@@ -128,6 +117,20 @@ sudo easy_install psidialogs</pre>
 <div class="highlight-python"><pre># as root
 pip uninstall psidialogs</pre>
 </div>
+</div>
+<div class="section" id="similar-projects">
+<h2>similar projects<a class="headerlink" href="#similar-projects" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="http://anygui.sourceforge.net/">anygui</a>: multiple backends</li>
+<li><a class="reference external" href="http://easygui.sourceforge.net/">easygui</a>: tk backend</li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/PyZenity">PyZenity</a>: Zenity backend</li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/vsgui">vsgui</a>: Zenity backend</li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/dlg">dlg</a>: dialog/Xdialog/gdialog  backend</li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/pythondialog">python-dialog</a>: dialog/Xdialog/gdialog  backend</li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/easydialogs-gtk">easydialogs-gtk</a>: EasyDialogs API, PyGTK backend</li>
+<li><a class="reference external" href="http://docs.python.org/library/easydialogs.html">EasyDialogs</a>: EasyDialogs API, Mac backend</li>
+<li><a class="reference external" href="http://pypi.python.org/pypi/EasyDialogs%20for%20Windows">EasyDialogs for Windows</a>: EasyDialogs API, Windows backend</li>
+</ul>
 </div>
 </div>
 
@@ -147,6 +150,7 @@ pip uninstall psidialogs</pre>
 <li><a class="reference internal" href="#general">General</a></li>
 <li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
 <li><a class="reference internal" href="#uninstall">Uninstall</a></li>
+<li><a class="reference internal" href="#similar-projects">similar projects</a></li>
 </ul>
 </li>
 </ul>
@@ -194,12 +198,12 @@ pip uninstall psidialogs</pre>
         <li class="right" >
           <a href="index.html" title="Indices and tables"
              >previous</a> |</li>
-        <li><a href="index.html">psidialogs 0.0.4 documentation</a> &raquo;</li> 
+        <li><a href="index.html">psidialogs 0.0.5 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer">
         &copy; Copyright 2011, ponty.
-      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.2.
     </div>
   </body>
 </html>
